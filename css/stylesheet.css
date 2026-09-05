@@ -1,0 +1,470 @@
+/* PREMIUM MODERN STYLESHEET - PLO System */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary: #991b1b;
+	--primary-hover: #7f1d1d;
+	--primary-light: #fef2f2;
+	--accent: #2563eb;
+	--accent-hover: #1d4ed8;
+	--success: #059669;
+	--danger: #dc2626;
+	--warning: #d97706;
+	
+	--bg-body: #f8fafc;
+	--card-bg: rgba(255, 255, 255, 0.92);
+	--card-border: rgba(226, 232, 240, 0.8);
+	
+	--text-main: #0f172a;
+	--text-muted: #475569;
+	--text-light: #94a3b8;
+	
+	--radius-sm: 6px;
+	--radius-md: 12px;
+	--radius-lg: 20px;
+	
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+	--transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	
+	--input-bg: #ffffff;
+	--table-row-bg: #ffffff;
+	--controls-bg: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] {
+	--bg-body: #0b0f19;
+	--card-bg: rgba(20, 26, 45, 0.92);
+	--card-border: rgba(51, 65, 85, 0.4);
+	
+	--text-main: #f8fafc;
+	--text-muted: #cbd5e1;
+	--text-light: #64748b;
+	
+	--primary-light: #2d0a0a;
+	--input-bg: #1e293b;
+	--table-row-bg: #111827;
+	--controls-bg: rgba(15, 23, 42, 0.9);
+}
+
+/* Campaign logo background for darkmode compatibility */
+[data-theme="dark"] img[src$="iloveyudark.png"] {
+	background-color: #ffffff !important;
+	padding: 5px 8px;
+	border-radius: var(--radius-sm);
+}
+
+/* Base resets & updates */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Outfit', sans-serif !important;
+	background: var(--bg-body) !important;
+	color: var(--text-main);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, b, th {
+	font-weight: 600;
+}
+
+/* Transparent container structure */
+.container, .container-fluid {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* Card glassmorphism wrapper */
+.card-glass {
+	background: var(--card-bg);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-md);
+	padding: 24px;
+	margin-bottom: 24px;
+	transition: var(--transition);
+}
+
+.card-glass:hover {
+	box-shadow: var(--shadow-lg);
+}
+
+/* Inputs & Form styling */
+input[type="text"], 
+input[type="password"], 
+select, 
+textarea {
+	width: 100%;
+	padding: 10px 16px;
+	font-size: 14px;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--card-border);
+	background-color: var(--input-bg) !important;
+	color: var(--text-main) !important;
+	transition: var(--transition);
+	outline: none;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+select:focus, 
+textarea:focus {
+	border-color: var(--primary);
+	box-shadow: 0 0 0 3px rgba(153, 27, 27, 0.15);
+}
+
+/* Custom Buttons styling */
+input[type="submit"],
+input[type="button"],
+.btn-modern {
+	background-color: var(--primary);
+	color: #ffffff;
+	border: none;
+	padding: 10px 24px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	transition: var(--transition);
+	box-shadow: var(--shadow-sm);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.btn-modern:hover {
+	background-color: var(--primary-hover);
+	transform: translateY(-1px);
+	box-shadow: var(--shadow-md);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+.btn-modern:active {
+	transform: translateY(0);
+}
+
+/* Table styling updates */
+table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: var(--radius-md);
+	overflow: hidden;
+	border: 1px solid var(--card-border);
+	box-shadow: var(--shadow-sm);
+	margin-bottom: 24px;
+}
+
+th {
+	background: var(--primary) !important;
+	color: #ffffff !important;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 14px 16px !important;
+	border-bottom: 2px solid var(--primary-hover) !important;
+}
+
+td {
+	padding: 12px 16px !important;
+	font-size: 14px !important;
+	background: var(--table-row-bg) !important;
+	border-bottom: 1px solid var(--card-border) !important;
+	color: var(--text-main) !important;
+}
+
+tr:last-child td {
+	border-bottom: none !important;
+}
+
+tr:hover td {
+	background-color: var(--primary-light) !important;
+	color: var(--primary) !important;
+	cursor: pointer;
+}
+
+/* Tomb / Voter Card Grid - 4 Columns on desktop */
+#thumbnails, .tomb-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr) !important;
+	gap: 20px !important;
+	padding: 10px 0 !important;
+}
+
+@media (max-width: 1200px) {
+	#thumbnails, .tomb-grid {
+		grid-template-columns: repeat(3, 1fr) !important;
+	}
+}
+
+@media (max-width: 768px) {
+	#thumbnails, .tomb-grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+}
+
+@media (max-width: 480px) {
+	#thumbnails, .tomb-grid {
+		grid-template-columns: 1fr !important;
+	}
+}
+
+/* Hide legacy clearing/spacing divs in the grid */
+#thumbnails .tomb[style*="transparent"],
+.tomb-grid .tomb[style*="transparent"],
+#thumbnails .tomb[style*="border:0"],
+.tomb-grid .tomb[style*="border:0"],
+#thumbnails .tomb[style*="border: 0"],
+.tomb-grid .tomb[style*="border: 0"],
+#thumbnails #hr,
+.tomb-grid #hr,
+#thumbnails div[style*="padding:"],
+.tomb-grid div[style*="padding:"],
+#thumbnails div[style*="99.3%"],
+.tomb-grid div[style*="99.3%"],
+#thumbnails div[style*="width: 99.3%"],
+.tomb-grid div[style*="width: 99.3%"] {
+	display: none !important;
+}
+
+.tomb {
+	display: flex !important;
+	flex-direction: column;
+	background: var(--card-bg) !important;
+	border: 1px solid var(--card-border) !important;
+	border-radius: var(--radius-md) !important;
+	padding: 16px !important;
+	box-shadow: var(--shadow-sm) !important;
+	transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+				box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+				border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+	position: relative;
+	width: 100% !important;
+	overflow: hidden;
+}
+
+.tomb:hover {
+	transform: translateY(-8px) scale(1.02) !important;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+	border-color: var(--primary) !important;
+}
+
+/* Modern Hover Actions for Tomb Cards Controls */
+#thumbnails .tomb [id^="div_controls_"],
+.tomb-grid .tomb [id^="div_controls_"],
+.tomb .tomb-controls,
+#thumbnails .tomb [id^="div_browse_"],
+.tomb-grid .tomb [id^="div_browse_"] {
+	position: absolute !important;
+	bottom: 12px !important;
+	left: 16px !important;
+	right: 16px !important;
+	display: flex !important;
+	gap: 8px !important;
+	background: var(--controls-bg) !important;
+	backdrop-filter: blur(8px) !important;
+	-webkit-backdrop-filter: blur(8px) !important;
+	border-radius: var(--radius-sm) !important;
+	padding: 6px !important;
+	box-shadow: var(--shadow-md) !important;
+	opacity: 0 !important;
+	visibility: visible !important; /* Override inline hidden state */
+	transform: translateY(10px) !important;
+	transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+	pointer-events: none !important;
+	z-index: 10 !important;
+}
+
+/* Hover active state for controls */
+#thumbnails .tomb:hover [id^="div_controls_"],
+.tomb-grid .tomb:hover [id^="div_controls_"],
+.tomb:hover .tomb-controls,
+#thumbnails .tomb:hover [id^="div_browse_"],
+.tomb-grid .tomb:hover [id^="div_browse_"] {
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+	pointer-events: auto !important;
+}
+
+.tomb img:not([style*="width:"]):not([style*="width :"]) {
+	width: 100% !important;
+	height: 200px !important;
+	object-fit: cover !important;
+	border-radius: var(--radius-sm) !important;
+	margin-bottom: 12px;
+	transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.tomb:hover img:not([style*="width:"]):not([style*="width :"]) {
+	transform: scale(1.03) !important;
+}
+
+/* Slide Container styling updates */
+#slidecontainer {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.slider-wrapper {
+	border: 6px solid var(--primary);
+	border-radius: var(--radius-md);
+	overflow: hidden;
+	box-shadow: var(--shadow-lg);
+	max-width: 100%;
+}
+
+/* Top control header updates */
+.controls-header {
+	background: #ffffff;
+	border-bottom: 1px solid var(--card-border);
+	box-shadow: var(--shadow-sm);
+	padding: 16px 24px;
+	margin-bottom: 24px;
+}
+
+/* Alert Styling */
+.alert-custom {
+	background-color: #fee2e2;
+	border: 1px solid #fecaca;
+	color: #991b1b;
+	padding: 12px 16px;
+	border-radius: var(--radius-sm);
+	margin-bottom: 16px;
+	font-weight: 500;
+}
+
+/* Utility layout classes */
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.space-y-4 > * + * {
+	margin-top: 16px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+	background: #cbd5e1;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #94a3b8;
+}
+
+.status-indicator {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.status-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.status-dot.blue {
+	background-color: #3b82f6 !important;
+	box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.status-dot.green {
+	background-color: #10b981 !important;
+	box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.status-dot.orange {
+	background-color: #f97316 !important;
+	box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+}
+
+.status-dot.red {
+	background-color: #ef4444 !important;
+	box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+}
+
+/* Container width standardizer - overrides inline style="width:1000px" to match mcelist.php Bootstrap container */
+div[style*="width:1000px" i],
+div[style*="width: 1000px" i],
+table[style*="width:1000px" i],
+table[style*="width: 1000px" i] {
+	width: 100% !important;
+	max-width: 1320px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
+}
+
+/* Card Photo Container & Change Photo Hover Action */
+.tomb-img-container {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+}
+.tomb-img-container img {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover !important;
+	transition: transform 0.4s ease;
+}
+.tomb-img-container:hover img {
+	transform: scale(1.05);
+}
+.tomb-img-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	font-weight: 600;
+	font-size: 13px;
+	border-radius: var(--radius-sm);
+	gap: 6px;
+}
+.tomb-img-container:hover .tomb-img-overlay {
+	opacity: 1;
+}
+.tomb-img-overlay i {
+	font-size: 20px;
+}
+
+/* Global Print Layout menu hiding rules */
+@media print {
+	#cssmenu-wrapper,
+	#cssmenu-wrapper + div,
+	.theme-toggle-btn,
+	.menu-toggle-btn,
+	nav {
+		display: none !important;
+	}
+}

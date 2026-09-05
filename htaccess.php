@@ -1,0 +1,3 @@
+RewriteEngine On    
+
+RewriteRule    	^bceofmce/?$    mceinfo.php    [NC,L]  

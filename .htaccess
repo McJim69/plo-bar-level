@@ -1,0 +1,194 @@
+
+Options +Indexes
+
+IndexOptions +Charset=UTF-8 +FancyIndexing +FoldersFirst +HTMLTable +IconsAreLinks +IgnoreCase +NameWidth=* +SuppressDescription +SuppressRules +XHTML -SuppressHTMLPreamble
+
+IndexHeadInsert "\
+        <link rel=\"shortcut icon\" href=\"/mcjim-server/theme/favicon.ico\" />\
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+
+IndexIgnore .htaccess /theme
+
+AddIcon /mcjim-server/theme/icons/empty.svg ^^BLANKICON^^
+AddIcon /mcjim-server/theme/icons/folder.svg ^^DIRECTORY^^
+AddIcon /mcjim-server/theme/icons/user-home.svg ..
+
+AddIconByType (ps,/mcjim-server/theme/icons/image-x-eps.svg) application/postscript
+
+AddIconByType (bmp,/mcjim-server/theme/icons/image-bmp.svg) image/bmp
+
+AddIconByType (gif,/mcjim-server/theme/icons/image-gif.svg) image/gif
+
+AddIconByType (ico,/mcjim-server/theme/icons/image-x-ico.svg) image/x-icon
+
+AddIconByType (jpg,/mcjim-server/theme/icons/image-jpeg.svg) image/jpeg
+
+AddIconByType (png,/mcjim-server/theme/icons/image-png.svg) image/png
+
+AddIconByType (psd,/mcjim-server/theme/icons/image-x-psd.svg) image/vnd.adobe.photoshop
+
+AddIconByType (draw,/mcjim-server/theme/icons/x-office-drawing.svg) image/svg+xml
+
+AddIconByType (tiff,/mcjim-server/theme/icons/image-tiff.svg) image/tiff
+
+AddIcon /mcjim-server/theme/icons/image-x-xcf.svg .xcf
+
+AddIconByType (image,/mcjim-server/theme/icons/image-x-generic.svg) image/* \
+                                                                   application/vnd.oasis.opendocument.graphics \
+                                                                   application/vnd.oasis.opendocument.graphics-template \
+                                                                   application/vnd.oasis.opendocument.image \
+                                                                   application/vnd.oasis.opendocument.image-template
+
+AddIconByType (playlist,/mcjim-server/theme/icons/audio-x-mp3-playlist.svg) audio/x-mpegurl \
+                                                                           application/vnd.apple.mpegurl \
+                                                                           application/pls+xml
+
+AddIconByType (audio,/mcjim-server/theme/icons/audio-x-generic.svg) audio/*
+
+AddIconByType (playlist,/mcjim-server/theme/icons/video-x-generic.svg) video/vnd.mpegurl
+
+AddIconByType (video,/mcjim-server/theme/icons/video-x-generic.svg) video/*
+
+AddIconByType (html,/mcjim-server/theme/icons/text-html.svg) text/html \
+                                                            application/xhtml+xml \
+                                                            text/uri-list
+
+AddIconByType (rss,/mcjim-server/theme/icons/application-rss+xml.svg) application/rss+xml \
+                                                                     application/atom+xml
+
+AddIconByType (vcal,/mcjim-server/theme/icons/evolution-calendar.svg) text/calendar \
+                                                                     text/x-vcalendar
+
+AddIconByType (vcard,/mcjim-server/theme/icons/addressbook.svg) text/vcard \
+                                                               text/x-vcard
+
+AddIconByType (torrent,/mcjim-server/theme/icons/application-x-bittorrent.svg) application/x-bittorrent
+
+AddIconByType (calc,/mcjim-server/theme/icons/x-office-spreadsheet.svg) application/vnd.oasis.opendocument.chart \
+                                                                       application/vnd.oasis.opendocument.chart-template \
+                                                                       application/vnd.oasis.opendocument.formula \
+                                                                       application/vnd.oasis.opendocument.formula-template \
+                                                                       application/vnd.oasis.opendocument.spreadsheet \
+                                                                       application/vnd.oasis.opendocument.spreadsheet-template \
+                                                                       text/csv \
+                                                                       application/vnd.ms-excel \
+                                                                       application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+AddIconByType (doc,/mcjim-server/theme/icons/x-office-document.svg) application/vnd.oasis.opendocument.text \
+                                                                   application/vnd.oasis.opendocument.text-master \
+                                                                   application/vnd.oasis.opendocument.text-template \
+                                                                   application/vnd.oasis.opendocument.text-web \
+                                                                   application/msword \
+                                                                   application/vnd.openxmlformats-officedocument.wordprocessingml.document
+
+AddIconByType (slideshow,/mcjim-server/theme/icons/x-office-presentation.svg) application/vnd.oasis.opendocument.presentation \
+                                                                             application/vnd.oasis.opendocument.presentation-template \
+                                                                             application/vnd.ms-powerpoint \
+                                                                             application/vnd.openxmlformats-officedocument.presentationml.presentation \
+                                                                             application/vnd.openxmlformats-officedocument.presentationml.slideshow
+
+AddIconByType (database,/mcjim-server/theme/icons/text-x-sql.svg) application/x-msaccess \
+                                                                 application/vnd.oasis.opendocument.database
+
+AddIconByType (pdf,/mcjim-server/theme/icons/application-pdf.svg) application/pdf
+
+AddIconByType (rtf,/mcjim-server/theme/icons/text-richtext.svg) application/rtf
+
+AddIconByType (tex,/mcjim-server/theme/icons/text-x-tex.svg) application/x-latex \
+                                                            application/x-tex
+
+AddIcon /mcjim-server/theme/icons/text-x-chdr.svg .h
+
+AddIcon /mcjim-server/theme/icons/text-x-c++hdr.svg .hpp
+
+AddIcon /mcjim-server/theme/icons/text-x-c++.svg .cpp
+
+AddIconByType (c,/mcjim-server/theme/icons/text-x-c.svg) text/x-c
+
+AddIconByType (java,/mcjim-server/theme/icons/text-x-java.svg) text/x-java-source \
+                                                              application/java-archive \
+                                                              application/java-vm
+
+AddIcon /mcjim-server/theme/icons/text-css.svg .sass .scss
+
+AddIconByType (css,/mcjim-server/theme/icons/text-css.svg) text/css
+
+AddIconByType (js,/mcjim-server/theme/icons/text-x-javascript.svg) application/javascript \
+                                                                  application/json
+
+AddIcon /mcjim-server/theme/icons/text-x-source.svg .diff .patch
+
+AddIcon /mcjim-server/theme/icons/text-x-makefile.svg Makefile
+
+AddIcon /mcjim-server/theme/icons/application-x-php.svg .php .phtml
+
+AddIcon /mcjim-server/theme/icons/text-x-python.svg .py
+
+AddIcon /mcjim-server/theme/icons/application-x-ruby.svg .rb
+
+AddIconByType (sql,/mcjim-server/theme/icons/text-x-sql.svg) application/x-sql
+
+AddIconByType (xml,/mcjim-server/theme/icons/text-xml.svg) application/xml \
+                                                          application/xml-dtd
+
+AddIcon /mcjim-server/theme/icons/package-x-generic.svg .pkg
+
+AddIconByType (bin,/mcjim-server/theme/icons/multipart-encrypted.svg) application/octet-stream
+
+AddIconByType (cd,/mcjim-server/theme/icons/application-x-cd-image.svg) application/x-iso9660-image
+
+AddIconByType (deb,/mcjim-server/theme/icons/deb.svg) application/x-debian-package
+
+AddIcon /mcjim-server/theme/icons/text-x-install.svg .msi
+
+AddIconByType (exe,/mcjim-server/theme/icons/application-x-ms-dos-executable.svg) application/x-msdownload
+
+AddIconByType (package,/mcjim-server/theme/icons/package-x-generic.svg) application/x-apple-diskimage \
+                                                                       application/vnd.apple.installer+xml \
+                                                                       application/vnd.android.package-archive
+
+AddIcon /mcjim-server/theme/icons/rpm.svg .rpm
+
+AddIconByType (script,/mcjim-server/theme/icons/text-x-script.svg) application/x-sh
+
+AddIconByType (font,/mcjim-server/theme/icons/font-x-generic.svg) font/*
+
+AddIconByType (gzip,/mcjim-server/theme/icons/application-x-archive.svg) application/x-gzip
+
+AddIcon /mcjim-server/theme/icons/application-x-archive.svg .gzip
+
+AddIconByType (rar,/mcjim-server/theme/icons/application-x-rar.svg) application/x-rar-compressed
+
+AddIconByType (tar,/mcjim-server/theme/icons/application-x-tar.svg) application/x-tar
+
+AddIconByType (zip,/mcjim-server/theme/icons/application-x-zip.svg) application/zip
+
+AddIconByType (archive,/mcjim-server/theme/icons/application-x-archive.svg) application/x-7z-compressed \
+                                                                           application/x-bzip \
+                                                                           application/x-bzip2 \
+                                                                           application/vnd.ms-cab-compressed
+
+AddIconByType (text,/mcjim-server/theme/icons/image-x-generic.svg) application/x-cbr
+
+AddIconByType (text,/mcjim-server/theme/icons/text-plain.svg) application/epub+zip \
+                                                             application/x-mobipocket-ebook \
+                                                             application/vnd.amazon.ebook
+
+AddIcon /mcjim-server/theme/icons/text-x-readme.svg README
+
+AddIcon /mcjim-server/theme/icons/text-richtext.svg .markdown .md
+
+AddIconByType (text,/mcjim-server/theme/icons/text-plain.svg) text/*
+
+DefaultIcon /mcjim-server/theme/icons/empty.svg
+
+HeaderName /mcjim-server/theme/header.html
+ReadmeName /mcjim-server/theme/footer.html
+IndexStyleSheet /mcjim-server/theme/style.css
+
+ErrorDocument 400 /mcjim-server/theme/400.html
+ErrorDocument 403 /mcjim-server/theme/403.html
+ErrorDocument 404 /mcjim-server/theme/404.html
+ErrorDocument 408 /mcjim-server/theme/408.html
+ErrorDocument 500 /mcjim-server/theme/500.html
+ErrorDocument 502 /mcjim-server/theme/502.html

@@ -1,0 +1,17 @@
+#nav div{
+	font:bold 12px arial;cursor:pointer;
+	background:#fff;padding:6px;
+	border-radius:3px;display:table-cell;
+}
+
+#nav div:hover{
+	background:#ff0000;color:#fff;
+}
+
+#nav #opt{
+	width:30px;padding:5px;text-align:center;vertical-align:middle
+}	
+  html, body{
+  margin: 0;
+  padding: 0;
+}

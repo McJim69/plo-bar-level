@@ -1,0 +1,65 @@
+	td{
+		border:0;
+	}
+	#info td{
+		font-size:20px;
+	}
+	.info, .info th, .info td {
+		border: 1px solid #000 !important;
+		border-collapse: collapse !important;
+	}
+	.orform1{
+		text-align:center;
+		font-weight:bold;
+		margin-top:-10px;
+		margin-left:-10px;
+		margin-bottom:5px;
+		color:#fff;
+		background:red;
+		padding:8px;
+		border:1px solid #000;
+		font-size:18px
+	}
+	.orform2{
+		text-align:center;
+		font-weight:bold;
+		margin-top:-10px;
+		margin-right:-10px;
+		margin-bottom:5px;
+		color:#fff;
+		background:red;
+		padding:8px;
+		border:1px solid #000;
+		font-size:18px
+	}
+
+/* Screen layout receipt card overrides to force visibility in dark mode */
+.print-container {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* Force dark text color for all contents inside the print-container on screen */
+.print-container h3,
+.print-container h5,
+.print-container span:not(.badge),
+.print-container td,
+.print-container th,
+.print-container div:not(.orform1):not(.orform2) {
+    color: #1e293b !important;
+}
+
+/* Fix table header default Bootstrap text color styling */
+.print-container .table-light th {
+    color: #1e293b !important;
+    background-color: #f1f5f9 !important;
+}
+
+/* Fix table row background colors to remain white/light on screen in dark mode */
+.print-container table,
+.print-container tr,
+.print-container td {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+}
