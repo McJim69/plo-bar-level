@@ -137,7 +137,7 @@
 
 <div id="spacer" style="margin-top:-80px"></div>
 
-<div id="toprint" style="display:none" style="width:1000px"> >
+<div id="toprint" style="display:none" style="width:1000px">
 	<div style="text-align:center;margin-top:-80px">
 		LIST OF PRECINCT LEADERS (PL)<BR>
 		<b STYLE='font-size:20px'>
