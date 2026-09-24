@@ -12,7 +12,7 @@
 <script> setActive("home"); </script>
 
 <div class="container my-5">
-	<div class="row justify-content-center">
+	<div class="row d-flex justify-content-center align-items-center">
 		<div class="col-lg-8 col-md-10">
 			<!-- Premium User Greeting Card -->
 			<div class="card-glass mb-5 animate__animated animate__fadeIn d-flex flex-column flex-md-row align-items-center justify-content-center gap-4" id="greeting-card">
@@ -35,14 +35,14 @@
 			</div>
 
 			<!-- Premium Bootstrap Carousel -->
-			<div id="indexCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid var(--primary);">
-				<div class="carousel-inner">
+			<div id="indexCarousel" class="bg-white carousel slide carousel-fade mb-5" data-bs-ride="carousel" style="border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid var(--primary);">
+				<div class="carousel-inner" align="center">
 					<?php
-						for($i=1;$i<9;$i++) {
+						for($i=1;$i<8;$i++) {
 							$active = ($i === 1) ? 'active' : '';
 							echo "
 							<div class='carousel-item $active'>
-								<img src='images/bcg/$i.jpg?".date("h:i:s")."' class='d-block w-100' alt='Slide $i' style='aspect-ratio: 16/10; object-fit: cover;'>
+								<img src='images/bcg/$i.jpg?".date("h:i:s")."' class='d-block' alt='Slide $i' style='max-width:400px;aspect-ratio: 2/2; object-fit: cover;'>
 							</div>";
 						}
 					?>

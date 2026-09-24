@@ -1,0 +1,20 @@
+###################################################################
+CyberPanel Successfully Installed.
+###################################################################
+
+Current Disk usage : 18/97GB (19%)
+Current RAM  usage : 727/32137MB (2.26%)
+Installation time  : 0 hrs 14 min 0 sec
+
+Visit: https://180.193.203.22:8090
+Panel username: admin
+Panel password: nIgqWMR3B70RrbkM
+				
+###################################################################
+Please make sure you have opened following port for both in/out:
+TCP: 8090 for CyberPanel
+TCP: 80, TCP: 443 and UDP: 443 for webserver
+TCP: 21 and TCP: 40110-40210 for FTP
+TCP: 25, TCP: 587, TCP: 465, TCP: 110, TCP: 143 and TCP: 993 for mail service
+TCP: 53 and UDP: 53 for DNS service
+Your provider seems blocked port 25 , E-mail sending may not work properly.

@@ -29,9 +29,6 @@
 					<li><a href='pllist.php' id='pl' title='Precinct Leaders'>PL List</a></li>
 					<li><a href='hllist.php' id='hl' title='Household Leaders'>HH Leaders</a></li>
 					<li><a href='hmlist.php' id='hm' title='Household Members'>HH Members</a></li>
-					<li><a href='officer.php' id='io' title='Information Officer'>Officers</a></li>
-					<li><a href='special.php' id='special' title='Special Operation List'>SPECIAL</a></li>
-					<li><a href='sollist.php' id='sol' title='Household Members'>Dili Ato</a></li>
 					<li class='has-sub'>
 						<a id='sum' href='#' onclick='return false;'>Reports <i class='fa-solid fa-chevron-down' style='font-size: 10px;'></i></a>
 						<ul>
